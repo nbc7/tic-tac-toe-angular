@@ -15,7 +15,7 @@ export class BoardComponent implements OnInit {
   }
 
   newGame() {
-    this.squares = Array(9).fill('');
+    this.squares = Array(9).fill(null);
     this.winner = '';
     this.xIsNext = true;
   }
@@ -25,7 +25,7 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(index: number) {
-    if (!this.squares[index]) {
+    if (!this.squares[index] && !this.winner) {
       this.squares.splice(index, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
