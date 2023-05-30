@@ -1,3 +1,14 @@
+.board {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.new-game-btn {
+  width: fit-content;
+}
+
 main {
   display: grid;
   grid-template-columns: 200px 200px 200px;
@@ -5,6 +16,6 @@ main {
 }
 
 app-square {
-  border: 1px gray solid;
+  border: 1px transparent solid;
   height: 200px;
 }
